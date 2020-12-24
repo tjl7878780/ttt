@@ -4,11 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .d1,.d2{
+      width: 200px;
+      height: 50px;
+    }
+    .d1{
+      background: red;
+      position: relative;
+    }
+    .d2{
+      background: black;
+    }
+  </style>
 </head>
 <body>
-  111112222
-  <p>111</p>
-  qwewrerw
-  11111111111111
+  <p class="d1" draggable="true">11111111111</p>
+  <p class="d2">222222222222</p>
+  <script>
+    let d1 = document.getElementsByClassName('d1')[0];
+    d1.addEventListener('dragstart',(e) => {
+      console.log('31')
+    });
+    d1.addEventListener('dragenter',(e) => {
+      console.log('36')
+      e.preventDefault()
+    });
+    d1.addEventListener('dragover',(e) => {
+      console.log('40')
+      e.preventDefault()
+    });
+    d1.addEventListener('drag',(e) => {
+      console.log('44')
+    });
+  </script>
 </body>
 </html>
