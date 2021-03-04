@@ -1,0 +1,11 @@
+.App{
+  height: 100%;
+  width: 60%;
+  padding: 5px;
+}
+.ant-picker-input input{
+  text-align: center;
+}
+.pages-home{
+  width: 60%;
+}
